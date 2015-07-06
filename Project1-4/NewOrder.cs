@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project1_4
 {
-    class Order
+    class NewOrder : Order
     {
-        public virtual decimal CalculateDiscount(decimal price, decimal discountPercentage)
+        public new decimal CalculateDiscount(decimal price, decimal discountPercentage)
         {
-            return 1;
+            return 2;
         }
     }
 }

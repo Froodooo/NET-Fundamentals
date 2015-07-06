@@ -6,23 +6,18 @@ using System.Threading.Tasks;
 
 namespace Project1_4
 {
-    class Program : Order
+    class Program
     {
         static void Main(string[] args)
         {
             // Using the new CalculateDiscount method
-            Order o1 = new Order();
-            decimal d1 = o1.CalculateDiscount(100, 20);
-            Console.WriteLine("First price: {0}", d1);
+            NewOrder newOrder = new NewOrder();
+            decimal newDiscount = newOrder.CalculateDiscount(100, 20);
+            Console.WriteLine("First price: {0}", newDiscount);
 
-            Order o2 = o1;
-            decimal d2 = o2.CalculateDiscount(100, 20);
-            Console.WriteLine("Second price: {0}", d2);
-        }
-
-        public new decimal CalculateDiscount(decimal price, decimal discountPercentage)
-        {
-            return discountPercentage * price;
+            Order order = newOrder;
+            decimal discount = order.CalculateDiscount(100, 20);
+            Console.WriteLine("Second price: {0}", discount);
         }
     }
 }
